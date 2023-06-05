@@ -51,6 +51,9 @@ class EnumModel {
 
     return '''
 enum $name {
+@JsonValue(null)
+swaggerGeneratedUnknown(null),
+
 ${resultStrings.join(',\n')};
 
 final ${isInteger ? 'int' : 'String'}? value;
